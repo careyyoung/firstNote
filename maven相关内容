@@ -19,3 +19,9 @@
 13.重新部署：mvn tomcat:redeploy
 14.部署展开的war文件：mvn war:exploded tomcat:exploded
 15.启动jetty:	mvn jetty:run
+
+二、maven仓库
+1.本地仓库 的更新：
+  mvn clean package install 
+2.远程 仓库 的更新
+  mvn clean package deploy
