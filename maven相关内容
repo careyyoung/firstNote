@@ -1,0 +1,21 @@
+一、maven的常用命令：
+1. 项目打包:mvn package,
+    	target目录
+    	编译了代码
+    	编译了测试代码
+    	使用junit测试并生成的报告
+    	生成代码的jar文件。
+2. 编译源程序:	mvn compile
+3. 编译测试代码：mvn test-compile
+4. 编译并测试:	mvn test
+5. 清空生成的文件:	mvn clean
+6. 产生site：mvn site，生成项目相关信息的网站
+7. 在本地Repository中安装jar：mvn install
+8. 启动tomcat:	mvn tomcat:run
+9. 部署到tomcat: tomcat:deploy
+10.撤销部署到tomcat: mvn tomcat:undeploy
+11.启动web应用：mvn tomcat:start
+12.停止web应用：mvn tomcat:stop
+13.重新部署：mvn tomcat:redeploy
+14.部署展开的war文件：mvn war:exploded tomcat:exploded
+15.启动jetty:	mvn jetty:run
