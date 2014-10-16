@@ -4,9 +4,11 @@ Ctrl+D：删除当前行
 Ctrl+L：定位在某行
 ctrl+m：是编辑器窗口最大化
 Ctrl+H：打开搜索对话框
+Ctrl+I：修复当前行缩进
 ctrl+.及ctrl+1：下一个错误及快速修改
 ctrl+/：对一行注释或取消注释。对于多行也同样适用。
 Ctrl+Shift+/：在代码窗口中是这种/*~*/注释，在JSP文件窗口中是<!--~-->
+
 Ctrl+Shift+O：作用是缺少的Import语句被加入，多余的Import语句被删除。
 Ctrl+Shift+F：格式化
 
