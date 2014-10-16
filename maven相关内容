@@ -25,3 +25,19 @@
   mvn clean package install 
 2.远程 仓库 的更新
   mvn clean package deploy
+
+  
+三、查到依赖的类库：
+http://www.mvnrepository.com
+	比如查询hibernate，可以找到结果列表中的hibernate类库条目。 
+   点击：http://www.mvnrepository.com/artifact/org.hibernate/hibernate， 
+   选择版本，比如3.2.6ga，即：http://www.mvnrepository.com/art ... /hibernate/3.2.6.ga 
+   复制文章中的： 
+<dependency> 
+  <groupId>org.hibernate</groupId> 
+  <artifactId>hibernate</artifactId> 
+  <version>3.2.6.ga</version> 
+</dependency> 
+  到pom.xml文件中即可。 
+  
+
