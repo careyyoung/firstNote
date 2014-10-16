@@ -11,14 +11,14 @@
 5. 清空生成的文件:	mvn clean
 6. 产生site：mvn site，生成项目相关信息的网站
 7. 在本地Repository中安装jar：mvn install
-8. 启动tomcat:	mvn tomcat:run
+8. 启动tomcat:mvn tomcat:run
 9. 部署到tomcat: tomcat:deploy
 10.撤销部署到tomcat: mvn tomcat:undeploy
 11.启动web应用：mvn tomcat:start
 12.停止web应用：mvn tomcat:stop
 13.重新部署：mvn tomcat:redeploy
 14.部署展开的war文件：mvn war:exploded tomcat:exploded
-15.启动jetty:	mvn jetty:run
+15.启动jetty:mvn jetty:run
 
 二、maven仓库
 1.本地仓库 的更新：
