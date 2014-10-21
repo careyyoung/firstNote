@@ -1,0 +1,36 @@
+一、指令元素：
+<%@  %>包围的：page/include/taglib；
+<%@　page 属性1＝值　属性2＝值 … %>
+<%@ include file="文件名称" %> 只能包含静态文件
+<%@ taglib uri=" URIToTagLibrary " prefix="tagPrefix" %>
+
+二、脚本元素：
+声明(declaration)：<%! int count = 0; %>
+小脚本(scriptles)：<% count++; %>
+表达式(expression)：<%= count%>
+
+三、动作元素：
+<jsp: >包围的：
+<jsp:useBean> <jsp:setProperty> <jsp:getProperty>
+<jsp:include> <jsp:forward> <jsp:param> <jsp:plugin> <jsp:params> <jsp:fallback>
+<jsp:root> <jsp:declaration> <jsp:scriptlet> <jsp:expression> <jsp:text> <jsp:output>
+<jsp:attribute> <jsp:body> <jsp:element>
+<jsp:invoke> <jsp:dobody>
+
+
+四、注释：
+<!--  -->
+<%--  --> 	
+
+
+五、范围：
+application
+session
+request
+page
+
+
+六、九大内置对象：
+request,response,session,application,page,pageContext,out,exception,config
+
+

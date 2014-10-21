@@ -29,3 +29,21 @@
 		通过其getInstance()方法获得数据库存取的实际实现类，这样在使用数据库存储对象时，只需通过factory对象获得实例即可。 
    3、就是对每个接口进行具体实现了。实现每个接口中的抽象方法。
    4、再写jsp页面。当在用到哪个方法时，直接用一个<jsp:useBean class="" id="" >来调用就行了。
+   
+目录结构：
+entiy包中，写vo类，即javabean；类名：xxx.java(xxx表示数据库中的表名)；
+dao包中，写dao接口，方法包括：增删改查等；类名：I-xxx-Dao.java(I表接口，xxx表vo，Dao表dao包)；
+daoImpl包中，写dao接口的实现类，实现dao接口中的方法；类名：xxx-Dao-Impl.java(xxx表vo，Dao-Impl表daoImpl包)；
+
+
+
+
+
+
+
+
+
+
+
+
+
