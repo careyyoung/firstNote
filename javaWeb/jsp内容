@@ -33,4 +33,12 @@ page
 六、九大内置对象：
 request,response,session,application,page,pageContext,out,exception,config
 
-
+七、乱码 （为了避免每页设置编码，建议使用过滤器对所有jsp进行编码处理。）
+<%@ page language="java" pageEncoding="UTF-8"%> jsp文件的存储格式，根据这个编码格式保存文件和编译。
+<%@ page contentType="text/html;charset=UTF-8"%> 解码格式，要与上面一致
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 控制浏览器的解码方式。如果前面的解码都一致并且无误的话，这个编码格式没有关系.
+post方法请求乱码的处理是，新页面开始处使用：request.setCharacterEncoding("UTF-8");
+get方法：1.可以修改服务器配置文件中的编码为：setting.xml文件的connector节点加URIEncoding="UTF-8" 
+或者 2.request.getParameter("type").getBytes("iso-8859-1"), "UTF-8"); 在接收type参数时进行编码转换；
+或者 3.对url进行编码：原页面使用js的type=encodeURI(type)方法对type值编码，
+		新页面再使用java的type=URLDecoder.decode(type,"UTF-8")对type值解码。
