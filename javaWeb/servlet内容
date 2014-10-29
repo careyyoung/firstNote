@@ -1,0 +1,12 @@
+1.web.xml 的加载过程：
+	启动一个 WEB 项目的时候, 容器首先会去读项目的 web.xml 配置文件里面的信息,
+	1> 首先是, 容器会先读 <context-param></context-param> 节点, 并创建一个 ServletContext 实例, 
+		以节点的 name 作为键,value 作为值,存储到上下文环境中。
+	2> 接着, 容器会去读 <listener></listener> 节点, 根据配置的 class 类路径来创建监听。
+	3> 接着, 容器去读 <filter></filter> 节点, 根据指定的类路径来实例化过滤器。
+	以上都是在 WEB 项目还没有完全启动起来的时候就已经完成了的工作。
+		如果系统中有用到 Servlet, 则 Servlet 是在第一次发起请求的时候被实例化的,且一般不会被容器销毁,
+		它可以服务于多个用户的请求。所以, Servlet 的初始化都要比上面提到的那几个要迟。
+
+总的来说, web.xml 的加载顺序是: context-param --> listener --> filter --> servlet
+	其中, 如果 web.xml 中出现了相同的节点, 则是按照在配置文件中出现的先后顺序来加载的。

@@ -40,7 +40,7 @@ request,response,session,application,page,pageContext,out,exception,config
 	控制浏览器的解码方式。如果前面的解码都一致并且无误的话，这个编码格式没有关系。
 	同时它还有一个重要的作用，规定了使用post方式提交表单的时候使用什么编码传入参数。
 	
-post方法请求乱码的处理是，新页面开始处使用：request.setCharacterEncoding("UTF-8");
+post方法：请求乱码的处理是在新页面开始处 使用：request.setCharacterEncoding("UTF-8");
 
 get方法：1.可以修改服务器配置文件中的编码为：setting.xml文件的connector节点加URIEncoding="UTF-8" 
 或者 2.request.getParameter("type").getBytes("iso-8859-1"), "UTF-8"); 在接收type参数时进行编码转换；
