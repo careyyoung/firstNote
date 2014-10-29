@@ -31,9 +31,17 @@
    4、再写jsp页面。当在用到哪个方法时，直接用一个<jsp:useBean class="" id="" >来调用就行了。
    
 目录结构：
-entiy包中，写vo类，即javabean；类名：xxx.java(xxx表示数据库中的表名)；
+持久层：
+entiy包中，写vo类，即javabean；类名：xxx.java(xxx表示数据库中的表名)；--也有把entiy包称作为domain包的。
 dao包中，写dao接口，方法包括：增删改查等；类名：I-xxx-Dao.java(I表接口，xxx表vo，Dao表dao包)；
 daoImpl包中，写dao接口的实现类，实现dao接口中的方法；类名：xxx-Dao-Impl.java(xxx表vo，Dao-Impl表daoImpl包)；
+
+业务层：
+service包，业务层里面的类
+
+展示层：
+使用servlet类处理控制逻辑类
+使用jsp处理页面展示
 
 
 
