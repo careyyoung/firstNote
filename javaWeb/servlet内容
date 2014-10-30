@@ -10,3 +10,15 @@
 
 总的来说, web.xml 的加载顺序是: context-param --> listener --> filter --> servlet
 	其中, 如果 web.xml 中出现了相同的节点, 则是按照在配置文件中出现的先后顺序来加载的。
+	
+2.servlet包：
+	javax.servlet
+	javax.servlet.http
+	servlet类用于处理http请求，运行在服务器端，用于处理事务逻辑的相关算法。
+3.Servlet生命周期
+	装载Servlet到servlet容器
+	初始化，init()
+	响应请求，service()
+	销毁，destroy()
+	
+自已写的servlet类只需要继 承HttpServlet类，重载doGet和doPost方法基本就行了。
