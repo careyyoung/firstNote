@@ -1,0 +1,25 @@
+Collection
+├List
+│├LinkedList （允许null元素，没有同步）
+│├ArrayList （可变大小的数组，没有同步）
+│└Vector
+│　└Stack
+└Set  （元素不重复）
+Map   （提供key到value的映射）
+├Hashtable  （key-value映射的哈希表，是同步的）
+├HashMap    （非同步的，并且允许null value和null key）
+└WeakHashMap
+
+  Collection接口：
+	Collection是最基本的集合接口，一个Collection代表一组Object，即Collection的元素（Elements）。
+	所有实现Collection接口的类都必须提供两个标准的构造函数：
+	无参数的构造函数用于创建一个空的Collection，
+	有一个 Collection参数的构造函数用于创建一个新的Collection，允许用户复制一个Collection。
+	遍历Collection中的每一个元素，典型的用法如下：
+　　　　Iterator it = collection.iterator(); // 获得一个迭代子
+　　　　while(it.hasNext()) {
+　　　　　　Object obj = it.next(); // 得到下一个元素
+　　　　}
+	由Collection接口派生的两个接口是List和Set。
+  List接口（有序的）
+  Set接口（不包含重复元素）
