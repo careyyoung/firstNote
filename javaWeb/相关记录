@@ -1,0 +1,11 @@
+1.分页技术 分页算法 
+     定义四个变量 
+	int pageSize每页显示多少记录，是指定的 int pageNow希望显示第几页,是用户选择的 
+	int pageCount 一共有多少页，是计算出来的 
+	int rowCount 一共有多少条记录，是从表中查询得到的 分页方法 
+	Select 字段名列表 from 表名 where id between ? and ?
+	
+	
+	
+2.tomcat
+  tomcat是web容器，是servlet容器，是jsp容器。
