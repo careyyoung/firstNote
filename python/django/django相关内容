@@ -1,0 +1,56 @@
+一、安装django
+1.pip install Django==1.7.5
+2.pip install bootstrap-admin
+二、配置django
+1.修改django安装目录下的全局设置文件,之后新建项目就会使用新配置的时区和语言：
+C:\app\Python27\Lib\site-packages\django\conf\global_settings.py
+ a. TIME_ZONE = 'Asia/Shanghai'
+ b. LANGUAGE_CODE = 'zh-cn'
+ 
+2.按照本目录想的rar修改django的配置：C:\app\Python27\Lib\site-packages\django\conf，
+使得之后创建的项目目录结构都遵循配置分离、依赖分离的原则。将该rar文件内容覆盖django安装目录下的对应文件夹，就不用重复 三-2~3的文件创建工作。
+
+三、创建django项目
+1.创建project pro01
+2.修改项目结构：配置分离。
+ a.在pro01/pro01增加pydevPackage，命名为settings，
+ b.在settings中创建common.py、dev.py、prod.py等对应不同环境的配置文件，
+ c.将原来的settings.py内容添加到common.py，删除settings.py，
+ d.进一步整理几个文件的配置，使其满足不同环境不同配置。
+ 
+3.修改项目结构：依赖分离。
+项目根目录下创建requirements文件夹，用于记录项目所有依赖的库
+requirements文件夹中创建：common.txt、dev.txt、prod.txt
+
+4.修改pydev菜单命令对应的配置：
+右击项目，属性，选择pydev-django，django settings module框输入：{项目名}.settings.dev
+这样第 2 点修改的内容，在右键菜单的django中的命令才可以按对应配置执行。
+
+5.创建app
+6.修改settings/common.py，增加app
+
+四、常用命令
+1.运行：python manage.py makemigrations {app}，告诉Django，你已经对模型做了一些更改,Django 1.7.1及以上的版本
+2.运行：python manage.py migrate，在数据库中创建模型所对应的数据表
+3.运行：python manage.py validate 
+
+//3.运行：python manage.py sqlmigrate {app} 0001，查看迁移行为将会执行哪些SQL语句
+//4.运行：python manage.py check，检查项目中是否存在问题
+//5.运行：python manage.py syncdb
+
+6.pydev run configure：
+# 使用开发服务器,监听所有可用 ip
+python manage.py runserver 9999 --settings=${project_name}.settings.dev
+
+7.清空数据库
+python manage.py flush
+
+8.创建超级管理员
+python manage.py createsuperuser
+ 
+9.数据库命令行,Django 会自动进入在settings.py中设置的数据库
+python manage.py dbshell
+
+10.部署时把静态文件收集到 STATIC_ROOT 目录
+python manage.py collectstatic
+
