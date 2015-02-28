@@ -1,0 +1,7 @@
+# -*- coding: UTF-8 -*-
+#requirement.txt 文件是为了快速地根据此文件中内容安装好必须的python依赖包。
+Django==1.7.5
+
+
+#Install production dependencies only.
+#-r requirements/prod.txt
