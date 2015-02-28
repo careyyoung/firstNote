@@ -7,8 +7,9 @@ C:\app\Python27\Lib\site-packages\django\conf\global_settings.py
  a. TIME_ZONE = 'Asia/Shanghai'
  b. LANGUAGE_CODE = 'zh-cn'
  
-2.按照本目录想的rar修改django的配置：C:\app\Python27\Lib\site-packages\django\conf，
-使得之后创建的项目目录结构都遵循配置分离、依赖分离的原则。将该rar文件内容覆盖django安装目录下的对应文件夹，就不用重复 三-2~3的文件创建工作。
+2.先备份：%PYTHON_HOME%\Lib\site-packages\django\conf to %PYTHON_HOME%\Lib\site-packages\django\conf_bak
+再将本目录下的django-conf文件夹 copy to %PYTHON_HOME%\Lib\site-packages\django\conf
+使得之后创建的项目目录结构都遵循配置分离、依赖分离的原则。这样就不用重复 三-2~3的文件创建工作。
 
 三、创建django项目
 1.创建project pro01
@@ -40,14 +41,14 @@ requirements文件夹中创建：common.txt、dev.txt、prod.txt
 
 6.pydev run configure：
 # 使用开发服务器,监听所有可用 ip
-python manage.py runserver 9999 --settings=${project_name}.settings.dev
+python manage.py runserver 9999  #配置三-4之后就不用加参数：--settings=${project_name}.settings.dev
 
 7.清空数据库
 python manage.py flush
 
 8.创建超级管理员
 python manage.py createsuperuser
- 
+
 9.数据库命令行,Django 会自动进入在settings.py中设置的数据库
 python manage.py dbshell
 

@@ -20,11 +20,13 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(__file__)))
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = '{{ secret_key }}'
 
-
+#createsuperuser admin
+#python manage.py createsuperuser --settings=${project_name}.settings.dev
 
 # Application definition
 
 INSTALLED_APPS = (
+    'bootstrap_admin',  # 一定要放在`django.contrib.admin`前面
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -83,3 +85,13 @@ MEDIA_DIRS = (
 TEMPLATE_DIRS = (
     os.path.join(BASE_DIR, 'templates').replace('\\', '/'),  # 把模板文件放project下的 templates文件夹
 )
+
+
+# For Sidebar Menu (List of apps and models) (RECOMMENDED)
+from django.conf.global_settings import TEMPLATE_CONTEXT_PROCESSORS
+TEMPLATE_CONTEXT_PROCESSORS = TEMPLATE_CONTEXT_PROCESSORS + (
+    'django.core.context_processors.request',
+)
+#print TEMPLATE_CONTEXT_PROCESSORS
+BOOTSTRAP_ADMIN_SIDEBAR_MENU = True
+
