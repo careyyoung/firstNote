@@ -9,4 +9,5 @@ urlpatterns = patterns('',
 
     url(r'^admin/', include(admin.site.urls)),
     url(r'^hello/$', '{{project_name}}.views.hello',),
+    #url(r'^(app_name)/hello/$', '(app_name).views.hello',),
 )

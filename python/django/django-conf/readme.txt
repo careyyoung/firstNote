@@ -12,8 +12,8 @@ can use ../updateDjangoConf.bat to make this change!
 update runserver.py to see console about hello page tip:
 D:\app\Python27\Lib\site-packages\django\core\management\commands\runserver.py
 change line 116 to:
-"Starting development server at http://%(addr)s:%(port)s/\nAccess http://%(addr)s:%(port)s/hello to see the hello page\n"
-
+"Starting development server at http://%(addr)s:%(port)s/\nAccess http://%(addr)s:%(port)s/hello for first testing\nAccess http://%(addr)s:%(port)s/admin after createsuperuser\n"
+            
 3.
 add admin-site favicon.ico
 D:\app\Python27\Lib\site-packages\bootstrap_admin\templates\admin\base.html
