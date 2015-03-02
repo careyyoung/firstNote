@@ -12,3 +12,8 @@ if __name__ == "__main__":
 
 #createsuperuser admin in cmd
 #python manage.py createsuperuser --settings={{project_name}}.settings.dev
+
+
+#python manage.py migrate {{app_name}} --settings={{project_name}}.settings.dev
+#python manage.py makemigratioins {{app_name}} --settings={{project_name}}.settings.dev
+#python manage.py sqlmigrate {{app_name}} (migration) --settings={{project_name}}.settings.dev
