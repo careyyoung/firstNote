@@ -1,0 +1,22 @@
+一、mysql.ini的配置：
+加入：
+[client]
+default-character-set=utf8
+[mysql]
+default-character-set=utf8
+[mysqld]
+default-character-set=utf8
+character-set-server=utf8
+collation_server=utf8_general_ci
+
+二、检查：
+show variables like 'collation_%';
+如果不是utf8_general_ci
+改成：
+SET collation_connection = utf8_general_ci;
+SET collation_database = utf8_general_ci;
+SET collation_server = utf8_general_ci;
+
+show variables like 'character_set_%';
+
+http://blog.csdn.net/wyzxg/article/details/8779682
