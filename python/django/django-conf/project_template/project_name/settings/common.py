@@ -81,7 +81,7 @@ MEDIA_DIRS = (
 )
 
 TEMPLATE_DIRS = (
-    os.path.join(BASE_DIR, 'templates').replace('\\', '/'),  # 把模板文件放project下的 templates文件夹
+    os.path.join(BASE_DIR, "templates").replace('\\', '/'),  # 把模板文件放project下的 templates文件夹
 )
 
 
