@@ -22,7 +22,7 @@ ALLOWED_HOSTS = []
 # Database
 # https://docs.djangoproject.com/en/{{ docs_version }}/ref/settings/#databases
 
-#DATABASES = {}
+# DATABASES = {}
 DATABASES = {
     'default': {
         #'ENGINE': 'django.db.backends.', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.

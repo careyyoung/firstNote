@@ -2,7 +2,7 @@
 from django import template 
 register = template.Library() 
 
-#用于前台显示截断过长字符串
+# 用于前台显示截断过长字符串
 @register.filter("truncate_chars")
 def truncate_chars(value, max_length):
         if len(value) > max_length:
