@@ -1,0 +1,23 @@
+page_type:
+1. homepage
+/index/
+/home/
+
+2. list page
+
+3. detail page
+
+4. other page
+/about/
+
+
+
+
+layout：
+	http://v3.bootcss.com/examples/blog/
+	header
+	body: left-right
+	footer
+	
+	
+model:
