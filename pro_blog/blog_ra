@@ -10,7 +10,9 @@ page_type:
 4. other page
 /about/
 
-
+5. common page
+header: logo/title/url/
+footer: about/
 
 
 layout：
@@ -21,3 +23,9 @@ layout：
 	
 	
 model:
+blog: blog_id/title/description/content/author/category/view/create_time/update_time/
+profile: profile_id/nick_name/picture/email/location/qq/weibo/job/create_time/update_time/
+message: message_id/name/email/content/create_time/update_time/
+about: blog_name/blog_url/blog_subname/create_time/update_time/
+==
+comment: comment_id/blog_id/name/email/content/create_time/update_time/
