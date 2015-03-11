@@ -13,6 +13,6 @@ class time_stamped_model(models.Model):
     class Meta:
         abstract = True
         
-        
+# http://lishiguang.iteye.com/blog/1243560 (Django Models的数据类型 汇总)        
 #class test(time_stamped_model): #继承abstract base class:time_stamped_model,test表就有上面通用的field
 #    test1 = models.CharField(max_length=200)
