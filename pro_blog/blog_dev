@@ -1,0 +1,19 @@
+POST: Create新增一个没有id的资源
+GET: Read取得一个资源
+
+PUT: Update更新一个已有资源。--update
+PATCH: Update更新一个已有资源；不存在时新增一个资源。--saveOrUpdate 
+
+DELETE: Delete删除一个资源
+OPTIONS:返回服务器针对特定资源所支持的HTTP请求方法。
+
+Django REST framework 是严格区分PUT和PATCH的
+
+一、restful api
+1.添加rest framework 支持
+2.serializers.py
+3.views.py/api.py: 方法一、1.使用ViewSet；2.使用Router类自动关联URL（方便快速）http://www.weiguda.com/blog/24/
+4.urls.py
+
+
+二、用XHR从API获取内容
