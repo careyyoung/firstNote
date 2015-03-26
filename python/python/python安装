@@ -1,0 +1,20 @@
+1. 安装python
+2. 安装pip：
+Python 2.7.9 and later (on the python2 series), and Python 3.4 and later include pip by default [1], so you may have pip already.
+3. 安装virtualenv：
+pip install virtualenv 
+
+4. 安装virtualenvwrapper/linux：virtualenvwrapper-win/win
+pip install virtualenvwrapper-win
+
+5. 安装辅助组件yolk 
+pip install yolk :yolk是一个列出python安装包的工具 
+yolk -l 
+
+6. 使用virtualenvwrapper-win创建虚拟环境：
+a. 修改环境变量：增加一个变量：WORKON_HOME，并且加入到path中：%WORKON_HOME%；
+b. lsvirtualenv 列出虚拟环境列表
+c. mkvirtualenv test-env1 新建虚拟环境 
+d. workon test-env1 使用该虚拟环境 （这样以后安装包就可以在这个虚拟环境中了。并且命令行最前面会有相应的环境名称显示）
+e. rmvirtualenv test-env1 删除虚拟环境
+f. deactivate 离开虚拟环境

@@ -1,5 +1,5 @@
 一、mysql.ini的配置：
-加入：
+1. 编码
 [client]
 default-character-set=utf8
 [mysql]
@@ -9,7 +9,18 @@ default-character-set=utf8
 character-set-server=utf8
 collation_server=utf8_general_ci
 
-二、检查：
+2. 数据库
+basedir=D:\app\mysql-5.6.22-winx64
+datadir=D:\app\mysql-5.6.22-winx64\data
+
+二、 安装服务
+1. 将MySQL的bin目录路径添加到系统变量里。
+2. 管理员权限打开cmd。
+3. cd 到MySQL的bin目录，然后：mysqld --install MySQL-5.6.22 --defaults-file="D:\app\mysql-5.6.22-winx64\my.ini"
+4. 启动服务：net start MySQL-5.6.22
+
+
+三、检查：
 show variables like 'collation_%';
 如果不是utf8_general_ci
 改成：

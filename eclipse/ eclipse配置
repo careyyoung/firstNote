@@ -1,0 +1,8 @@
+1. 编码问题
+Window->Preferences->General->workspace
+Window->Preferences->General->Content Type
+修改为utf-8
+
+2. 字体问题
+Window->Preferences->General->appearance->colors and fonts，basic， Text Font
+修改字体、大小。
