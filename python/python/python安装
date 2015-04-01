@@ -18,3 +18,8 @@ c. mkvirtualenv test-env1 新建虚拟环境
 d. workon test-env1 使用该虚拟环境 （这样以后安装包就可以在这个虚拟环境中了。并且命令行最前面会有相应的环境名称显示）
 e. rmvirtualenv test-env1 删除虚拟环境
 f. deactivate 离开虚拟环境
+
+7.安装mysqldb
+安装MySQL-python-1.2.3.win-amd64-py2.7.exe
+可能需要修改对应的python_path：打开注册表，修改：HKEY_LOCAL_MACHINE\SOFTWARE\Python\PythonCore\2.7\InstallPath对应的值。
+

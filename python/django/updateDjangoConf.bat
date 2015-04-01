@@ -20,9 +20,9 @@ goto start
 :work_pc
 echo.
 echo set work_pc
-set var1=C:\app\Python27\Lib\site-packages\django\conf
-set var2=C:\app\Python27\Lib\site-packages\django\conf_backup
-set var3=E:\eclipse_git\firstNote\python\django\django-conf
+set var1=D:\app\Python27\virtualenv-workonhome\test-env1\Lib\site-packages\django\conf
+set var2=D:\app\Python27\virtualenv-workonhome\test-env1\Lib\site-packages\django\conf_backup
+set var3=E:\workspace\firstNote\python\django\django-conf
 echo set work_pc ok
 goto start
 

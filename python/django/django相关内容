@@ -1,6 +1,6 @@
 一、安装django
 1.pip install Django==1.7.5
-2.pip install bootstrap-admin==0.3.4
+2.pip install bootstrap-admin==0.3.5
 二、配置django
 1.修改django安装目录下的全局设置文件,之后新建项目就会使用新配置的时区和语言：
 C:\app\Python27\Lib\site-packages\django\conf\global_settings.py
