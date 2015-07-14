@@ -1,0 +1,17 @@
+1. 下载：http://downloads.mongodb.org/win32/mongodb-win32-x86_64-2.6.6.zip
+2. 安装：
+	2.1 解压：
+	2.2 新建文件夹：数据存放目录、日志存放目录
+3. 启动：
+	进入解压后对应的目录：
+	mongod --port 27017 --bind_ip 127.0.0.1 --dbpath data/db --logpath log/mongodb.log --logappend --fork  
+4. 访问：
+	进入解压后对应的目录：
+	mongo --port 27017 --host 127.0.0.1
+	
+例如：
+mongod --dbpath=E:\DataBase\mongodb-2.6.6\data\db --logpath=E:\DataBase\mongodb-2.6.6\log\mongodb.log --logappend
+
+5. 加入到windows服务：
+	mongod.exe --dbpath=E:\DataBase\mongodb-2.6.6\data\db --logpath=E:\DataBase\mongodb-2.6.6\log\mongodb.log --logappend --serviceName MongoDB-2.6.6 -install  
+	

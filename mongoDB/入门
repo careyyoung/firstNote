@@ -1,0 +1,38 @@
+show dbs：显示数据库列表 
+show collections：显示当前数据库中的集合（类似关系数据库中的表） 
+show users：显示用户
+
+use <db name>：切换当前数据库，这和MS-SQL里面的意思一样 
+db.help()：显示数据库操作命令，里面有很多的命令 
+db.xxx.help()：显示集合操作命令  
+db.xxx.find()：对于当前数据库中的xxx集合进行数据查找（由于没有条件，会列出所有数据） 
+db.xxx.find( { a : 1 } )：对于当前数据库中的xxx集合进行查找，条件是数据中有一个属性叫a，且a的值为1
+
+
+1. 创建数据库：
+    use myTest --由于没有创建数据库的命令，所以可以先切换到要创建的db下，
+    db.createCollection('user') --再创建Collection，这样就可以创建对应的数据库myTest。
+
+-- 以下都忽略前缀：db.collection.
+2. 增删改查：
+	insert()
+	remove()
+	update()
+	find()
+	
+3. 其他：
+	count() 总数
+	distinct() 查询，并去掉重复
+	find().limit(10) 查询前10条数据
+	find().skip(1) 查询1条以后的所有数据
+	findOne() 查询第一条数据
+	find().sort({salary:1}) 按salary升序排序
+	find().sort({salary:-1}) 按salary降序排序
+	renameCollection('c_temp') 集合重命名
+	drop() 删除集合
+	dropDatabase() 删除当前数据库
+	
+	
+	
+	
+	
