@@ -19,7 +19,9 @@ d. workon test-env1 使用该虚拟环境 （这样以后安装包就可以在�
 e. rmvirtualenv test-env1 删除虚拟环境
 f. deactivate 离开虚拟环境
 
-7.安装mysqldb
+7. 安装mysqldb
 安装MySQL-python-1.2.3.win-amd64-py2.7.exe
 可能需要修改对应的python_path：打开注册表，修改：HKEY_LOCAL_MACHINE\SOFTWARE\Python\PythonCore\2.7\InstallPath对应的值。
 
+
+8. python lib 包：http://www.lfd.uci.edu/~gohlke/pythonlibs/
